@@ -1,0 +1,11 @@
+<span>โปรแกรมมา 4 จ่าย 3</span>
+<div>
+  <input #buffetPriceInput  type="text" placeholder="ราคาบุฟเฟ่">
+</div>
+<div><button (click)="calbuffet(buffetPriceInput.value)" >คำนวณ</button></div>
+
+<div>
+  <span>
+     จ่ายคนละ : {{result}} บาท
+  </span>
+</div>
