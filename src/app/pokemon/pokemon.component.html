@@ -1,0 +1,37 @@
+
+<img [src]="pokemonUrl" alt="pic" 
+/>
+
+
+
+
+
+<p-table
+  [value]="pokemonDataList"
+  [paginator]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <!-- <th>Pic</th> -->
+      <th>URL</th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-pokemon>
+    <tr>
+      <td>{{ pokemon.name }}</td>
+      <!-- <td><img [src]="getImage(pokemon.url)" alt="pic" /></td> -->
+      <td>{{ pokemon.url }}</td>
+      <td class="control-button-table">
+        <p-button
+          (onClick)="showPokemon(pokemon)"
+          label="แสดงรูป"
+          icon="pi pi-search"
+        ></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

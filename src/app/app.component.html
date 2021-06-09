@@ -1,18 +1,29 @@
-
+<p-toast></p-toast>
 <div class="container">
   <header class="container_header">
-    <span [routerLink]="['home']">
+    <span [routerLink]="['/home']">
       Home
     </span>
-    <span [routerLink]="['student']">
+    <span [routerLink]="['/student']">
       Student
     </span>
-    <span [routerLink]="['add']">
+    <span [routerLink]="['/add']">
       Add Student
     </span>
+    <span [routerLink]="['/pokemon']">
+      Pokemon
+    </span>
+    <span [routerLink]="['/pokemongo']">
+      PokemonGo
+    </span>
+    
   </header>
   <main class="container_main">
-    Hello Github
+    <!-- <p-button (onClick)="transform5BathToBath()" label="Calculate"></p-button>
+    <p-button (onClick)="sum()" label="Sum"></p-button>
+    เหรียญห้าบาท{{fiveBathList | json }}
+    เหรียญบาท {{oneBathList | json}}
+    ผลรวม {{summary}} -->
     <router-outlet></router-outlet>
   </main>
 </div>

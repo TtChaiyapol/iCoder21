@@ -13,3 +13,33 @@
         align-items: center;
         column-gap: 0.5em;
 }
+
+.query-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    column-gap: 0.5em;
+    padding: 0.5em;
+}
+
+.table-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.control-button-table {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    row-gap: 0.5em;
+}
+
+th.p-table-button {
+    width: 10%;
+}

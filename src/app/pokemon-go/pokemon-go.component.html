@@ -1,0 +1,26 @@
+<!-- <p-dropdown
+  [options]="cities"
+  [formControl]="cityFormControl"
+  placeholder="Select a City"
+  optionLabel="name"
+  [showClear]="true"
+></p-dropdown>
+
+{{cityFormControl.value|json}} -->
+
+<p-dropdown
+  [options]="pokemonDataList"
+  [formControl]="pokemonFormControl"
+  placeholder="Select a Pokemon"
+  optionLabel="name"
+  [showClear]="true"
+  (onChange)="selectedPokemon($event)"
+></p-dropdown>
+
+<span *ngFor="let imageUrl of image_sprites">
+  <img #pokemonImage class="clickable-img" [src]="imageUrl" />
+</span>
+
+<span *ngFor="let abi of abilities">
+    {{abi}}
+</span>

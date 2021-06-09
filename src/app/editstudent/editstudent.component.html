@@ -1,18 +1,16 @@
-
-
-<div [formGroup]="addStudentFormGroup" class="student-form">
+<div [formGroup]="editStudentFormGroup" class="student-form">
     <div>
         <span>
             ชื่อ: 
         </span>
-        <input type="text" formControlName="name" pInputText />
+        <input type="text" [formControlName]="'name'" pInputText />
         <p-message style="position: absolute;" *ngIf="nameFormControl.dirty && nameFormControl.invalid" severity="error" text="Field is required"></p-message>
     </div>
     <div>
         <span>
            อีเมล: 
         </span>
-        <input type="text" formControlName="email" pInputText />
+        <input type="text" [formControlName]="'email'" pInputText />
         <p-message style="position: absolute;" *ngIf="emailFormControl.hasError('required') && emailFormControl.dirty && nameFormControl.invalid" severity="error" text="Field is required"></p-message>
         <p-message style="position: absolute;" *ngIf="emailFormControl.hasError('email') && emailFormControl.dirty && nameFormControl.invalid" severity="error" text="Invalid Email"></p-message>
     </div>
@@ -20,15 +18,19 @@
         <span>
             โทรศัพท์: 
         </span>
-        <input type="text" formControlName="tel" pInputText />
+        <input type="text" [formControlName]="'tel'" pInputText />
         <p-message style="position: absolute;" *ngIf="telFormControl.dirty && nameFormControl.invalid" severity="error" text="Field is required"></p-message>
     </div>
 
+    <div>
+        <span>createDate:</span>
+            <p-calendar  [showIcon]="true" inputId="icon"></p-calendar>
+
+    </div>
+
     <div class="query-container">
-        <p-button [disabled]="addStudentFormGroup.invalid" label="บันทึก" (onClick)="saveStudent()"></p-button>
+        <p-button [disabled]="editStudentFormGroup.invalid" label="บันทึก" (onClick)="saveStudent()"></p-button>
         <p-button label="รีเซ็ต" (onClick)="resetStudent()"></p-button>
         <p-button label="ย้อนกลับ" [routerLink]="['/student']"></p-button>
     </div>
-
-    
 </div>

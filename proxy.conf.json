@@ -1,0 +1,7 @@
+{
+    "/training-demo/student/*": {
+      "target": "https://showcase.cdgs.co.th/",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
